@@ -1,2 +1,2 @@
 # portfolio
-A portfolio of websites I've made, and introduction about myself.
+A portfolio of websites I've made, and introduction of myself.
