@@ -8,7 +8,8 @@ function Introduction() {
       </div>
       <div className='descriptionContainer'>
         <h1 className='title'>About me</h1>
-        <p className='description grey'>I'm Leo, a CS student in college(NCKU). I'm still learning full-stack JavaScript on The Odin Project website. Already having decent knowledge about frontend, I plan to learn about NodeJS, MongoDB and other backend technologies in the future.</p>
+        <p className='description grey'>I'm Leo, a CS student in college. I'm still learning full-stack JavaScript on <a href='https://www.theodinproject.com/'>The Odin Project</a> website. Already having decent knowledge about frontend, I plan to learn about NodeJS, MongoDB and other backend technologies in the future.</p>
+        <p className='description grey'>(I might use my own photo someday)</p>
         <div className='iconBar'>
           <a href="https://github.com/ascodeasice">
             <img className='icon' src={Github} alt='github icon' />

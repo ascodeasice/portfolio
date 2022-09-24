@@ -1,12 +1,27 @@
+:root {
+  --slideLeftTime: 1s;
+  --maroon: #820000;
+  --red: #C10000;
+  --lightGrey: #EEEEEE;
+  --grey: #DEDEDE;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
   min-height: 100vh;
+  background-color: var(--lightGrey);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+a, a:visited {
+  color: var(--maroon);
 }
 
 .white {
@@ -19,7 +34,7 @@ body {
 
 .introduction {
   padding-top: 20px;
-  background: linear-gradient(170deg, rgba(136, 0, 0, 1) 0%, rgba(136, 0, 0, 1) 60.5%, rgba(255, 255, 255, 1) 61%, rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(170deg, var(--maroon) 0%, var(--maroon) 60.5%, var(--lightGrey) 61%, var(--lightGrey) 100%);
   margin-top: 0;
   min-height: 440px;
   width: 100vw;
@@ -38,7 +53,11 @@ body {
   display: inline-block;
   box-shadow: 0 0 10px black;
   z-index: 5;
-  animation: slideLeft 1s;
+  animation: slideLeft var(--slideLeftTime);
+
+  background-image: url('../assets/photo/star.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .name {
@@ -60,11 +79,13 @@ body {
   box-shadow: 0 0 5px black;
   padding: 20px;
 
+  /* hide it before animation */
   opacity: 0;
   max-width: 60vw;
   min-height: 200px;
-  animation: slideLeft 1s 1s;
+  animation: slideLeft var(--slideLeftTime) var(--slideLeftTime);
   animation-fill-mode: forwards;
+  /* keep change of opacity after animation */
 }
 
 .title {
@@ -87,17 +108,3 @@ body {
 .icon:hover {
   transform: rotate(360deg);
 }
-
-@keyframes slideLeft {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
-/* for text slide, use margin-left */
