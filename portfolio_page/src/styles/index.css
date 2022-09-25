@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
 }
 
-p {
+p, a {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -46,7 +46,6 @@ a, a:visited {
 
 .profilePicture {
   position: relative;
-  background-color: grey;
   width: 350px;
   height: 400px;
   margin-left: 20px;
@@ -69,6 +68,7 @@ a, a:visited {
   text-align: center;
   margin-bottom: 10px;
   font-size: 3rem;
+  font-weight: normal;
 }
 
 .descriptionContainer {
@@ -90,6 +90,7 @@ a, a:visited {
 
 .title {
   margin: 0;
+  margin-bottom: 10px;
 }
 
 .iconBar {
@@ -107,4 +108,54 @@ a, a:visited {
 
 .icon:hover {
   transform: rotate(360deg);
+}
+
+.paddingLeft {
+  padding-left: 20px;
+}
+
+.projectContainer {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  row-gap: 30px;
+  column-gap: 20px;
+  min-height: 600px;
+}
+
+.project {
+  background-color: var(--lightGrey);
+  box-shadow: 0 0 10px black;
+  border-radius: 10px;
+}
+
+.projectName {
+  margin: 10px 0 10px 0;
+}
+
+.projectNameWrapper {
+  display: grid;
+  grid-template-columns: 1fr repeat(2, min-content);
+  align-items: center;
+  column-gap: 10px;
+  padding: 0 20px 0 20px;
+}
+
+.liveLink {
+  white-space: nowrap;
+}
+
+.projectPicture {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 2px solid var(--grey);
+  border-radius: 10px 10px 0 0;
+}
+
+.description {
+  white-space: pre-line;
+  padding-right: 10px;
 }
