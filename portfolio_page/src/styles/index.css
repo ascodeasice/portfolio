@@ -37,7 +37,7 @@ a, a:visited {
   background: linear-gradient(170deg, var(--maroon) 0%, var(--maroon) 60.5%, var(--lightGrey) 61%, var(--lightGrey) 100%);
   margin-top: 0;
   min-height: 440px;
-  width: 100vw;
+  min-width: 90vw;
 
   position: relative;
   display: flex;
@@ -83,7 +83,7 @@ a, a:visited {
   opacity: 0;
   max-width: 60vw;
   min-height: 200px;
-  animation: slideLeft var(--slideLeftTime) var(--slideLeftTime);
+  animation: slideLeft var(--slideLeftTime);
   animation-fill-mode: forwards;
   /* keep change of opacity after animation */
 }
@@ -115,8 +115,7 @@ a, a:visited {
 }
 
 .projectContainer {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 20px 20px 20px;
   display: grid;
   grid-template-rows: repeat(auto-fit, minmax(500px, 1fr));
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -129,10 +128,11 @@ a, a:visited {
   background-color: var(--lightGrey);
   box-shadow: 0 0 10px black;
   border-radius: 10px;
+  opacity: 0;
 }
 
 .projectName {
-  margin: 10px 0 10px 0;
+  margin: 5px 0 5px 0;
 }
 
 .projectNameWrapper {
@@ -150,7 +150,8 @@ a, a:visited {
 .projectPicture {
   height: 300px;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: var(--grey);
   border-bottom: 2px solid var(--grey);
   border-radius: 10px 10px 0 0;
 }
@@ -158,4 +159,8 @@ a, a:visited {
 .description {
   white-space: pre-line;
   padding-right: 10px;
+}
+
+.slideFromBottom {
+  animation: slideFromBottom 1s .5s forwards;
 }
