@@ -22,3 +22,13 @@
     transform: translateY(0%);
   }
 }
+
+@keyframes changeColor {
+  from {
+    background-color: var(--lightGrey)
+  }
+
+  to {
+    background-color: var(--maroon);
+  }
+}

@@ -7,7 +7,7 @@ import BattleShip from '../assets/photo/battleship.png';
 import Todo from '../assets/photo/todo.png';
 import { useEffect } from 'react';
 
-function ProjectContainer() {
+function ProjectContainer({ scrollTrigger }) {
   const projects = [
     {
       name: 'Instagram Clone',
@@ -26,7 +26,7 @@ function ProjectContainer() {
     {
       name: 'Fake IKEA',
       description: 'A e-commerce website that imitates IKEA shopping website, allowing user to buy things.\n\nMade with React and React Router.',
-      liveLink: 'https://ascodeasice.github.io/shopping-cart/store',
+      liveLink: 'https://ascodeasice.github.io/shopping-cart',
       githubLink: 'https://github.com/ascodeasice/shopping-cart',
       src: IKEA
     },
@@ -53,35 +53,13 @@ function ProjectContainer() {
     }
   ];
 
-  function scrollTrigger(selector) {
-    let els = document.querySelectorAll(selector)
-    els = Array.from(els)
-    els.forEach(el => {
-      addObserver(el)
-    })
-  }
-  function addObserver(el) {
-    // We are creating a new IntersectionObserver instance
-    let observer = new IntersectionObserver((entries, observer) => { // This takes a callback function that receives two arguments: the elements list and the observer instance.
-      entries.forEach(entry => {
-        // `entry.isIntersecting` will be true if the element is visible
-        if (entry.isIntersecting) {
-          entry.target.classList.add('slideFromBottom')
-          // We are removing the observer from the element after adding the active class
-          observer.unobserve(entry.target)
-        }
-      })
-    })
-    // Adding the observer to the element
-    observer.observe(el)
-  }
-
   useEffect(() => {
-    scrollTrigger('.project')
+    // trigger animation when scrolled to it
+    scrollTrigger('.project', 'slideFromBottom');
   }, []);
 
   return (
-    <>
+    <div className="myProjects">
       <h1 className='title paddingLeft'>My Projects</h1>
       <div className="projectContainer">
         {
@@ -89,7 +67,7 @@ function ProjectContainer() {
             githubLink={project.githubLink} liveLink={project.liveLink} src={project.src} />)
         }
       </div>
-    </>
+    </div>
   )
 }
 

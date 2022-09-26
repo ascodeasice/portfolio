@@ -20,8 +20,12 @@ p, a {
   font-family: 'Roboto', sans-serif;
 }
 
-a, a:visited {
+a {
   color: var(--maroon);
+}
+
+a:hover {
+  color: var(--red);
 }
 
 .white {
@@ -114,6 +118,10 @@ a, a:visited {
   padding-left: 20px;
 }
 
+.myProjects {
+  margin: 40px 0 40px 0;
+}
+
 .projectContainer {
   padding: 0 20px 20px 20px;
   display: grid;
@@ -162,5 +170,14 @@ a, a:visited {
 }
 
 .slideFromBottom {
-  animation: slideFromBottom 1s .5s forwards;
+  animation: slideFromBottom 1s .25s forwards;
+}
+
+.contact {
+  min-height: 400px;
+  background-color: var(--maroon);
+}
+
+.changeColor {
+  animation: changeColor 2s;
 }
