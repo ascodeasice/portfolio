@@ -1,0 +1,31 @@
+@media (max-width: 800px) {
+  .introduction {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+  }
+
+  .name {
+    top: -10px;
+    left: 400px;
+    white-space: nowrap;
+  }
+
+  .profilePicture {
+    width: 300px;
+    height: 400px;
+    top: -20px;
+  }
+
+  .descriptionContainer {
+    right: 20px;
+  }
+
+  .contactPicture {
+    min-width: 300px;
+    max-height: 200px;
+  }
+
+  .contact {
+    min-height: 300px;
+  }
+}
