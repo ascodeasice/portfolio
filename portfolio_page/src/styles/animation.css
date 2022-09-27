@@ -32,3 +32,13 @@
     background-color: var(--maroon);
   }
 }
+
+@keyframes changeOpacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

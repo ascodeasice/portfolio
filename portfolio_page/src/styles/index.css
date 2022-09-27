@@ -4,6 +4,7 @@
   --red: #C10000;
   --lightGrey: #EEEEEE;
   --grey: #DEDEDE;
+  --contactAnimationTime: 2s;
 }
 
 body {
@@ -56,7 +57,9 @@ a:hover {
   display: inline-block;
   box-shadow: 0 0 10px black;
   z-index: 5;
-  animation: slideLeft var(--slideLeftTime);
+  opacity: 0;
+  animation: slideLeft var(--slideLeftTime) .5s;
+  animation-fill-mode: forwards;
 
   background-image: url('../assets/photo/star.jpg');
   background-repeat: no-repeat;
@@ -87,7 +90,7 @@ a:hover {
   opacity: 0;
   max-width: 60vw;
   min-height: 200px;
-  animation: slideLeft var(--slideLeftTime);
+  animation: slideLeft var(--slideLeftTime) .5s;
   animation-fill-mode: forwards;
   /* keep change of opacity after animation */
 }
@@ -95,6 +98,7 @@ a:hover {
 .title {
   margin: 0;
   margin-bottom: 10px;
+  white-space: nowrap;
 }
 
 .iconBar {
@@ -167,6 +171,7 @@ a:hover {
 .description {
   white-space: pre-line;
   padding-right: 10px;
+  text-decoration: none;
 }
 
 .slideFromBottom {
@@ -178,6 +183,33 @@ a:hover {
   background-color: var(--maroon);
 }
 
-.changeColor {
-  animation: changeColor 2s;
+.contact {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  opacity: 0;
+  background-color: var(--maroon);
+}
+
+.contactPicture {
+  object-fit: cover;
+  min-width: 500px;
+  max-height: 300px;
+}
+
+.changeOpacity {
+  animation: changeOpacity var(--contactAnimationTime) forwards;
+}
+
+.emailWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+  align-items: center;
+  column-gap: 10px;
+  width: fit-content;
+}
+
+.bigIcon {
+  width: 50px;
+  height: 50px;
 }

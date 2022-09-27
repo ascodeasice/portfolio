@@ -63,7 +63,7 @@ function ProjectContainer({ scrollTrigger }) {
       <h1 className='title paddingLeft'>My Projects</h1>
       <div className="projectContainer">
         {
-          projects.map((project) => <Project name={project.name} description={project.description}
+          projects.map((project, i) => <Project key={i} name={project.name} description={project.description}
             githubLink={project.githubLink} liveLink={project.liveLink} src={project.src} />)
         }
       </div>
