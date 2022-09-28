@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/portofolio_page/static/css/main.15a5329a.css",
+    "main.js": "/portofolio_page/static/js/main.d3ed032d.js",
+    "static/media/waldo.png": "/portofolio_page/static/media/waldo.2dfdfddaf421cbbbd3df.png",
+    "static/media/star.jpg": "/portofolio_page/static/media/star.3f03def3fcec55138d12.jpg",
+    "static/media/instagramClone.png": "/portofolio_page/static/media/instagramClone.96201da493fd517a76ef.png",
+    "static/media/ikea.png": "/portofolio_page/static/media/ikea.0695312fa1d12b4f89c9.png",
+    "static/media/memoryCard.png": "/portofolio_page/static/media/memoryCard.576eda2545dea5fa12c9.png",
+    "static/media/todo.png": "/portofolio_page/static/media/todo.1be6ca481b9bc9a1dc18.png",
+    "static/media/battleship.png": "/portofolio_page/static/media/battleship.17b1878fbc7fc0d9e79d.png",
+    "static/media/mail.svg": "/portofolio_page/static/media/mail.cf7d332236ce36f70f9ec8bb657ad3bd.svg",
+    "index.html": "/portofolio_page/index.html",
+    "static/media/github.svg": "/portofolio_page/static/media/github.4f33f29afb92d1a50180b6bb751f55dd.svg",
+    "main.15a5329a.css.map": "/portofolio_page/static/css/main.15a5329a.css.map",
+    "main.d3ed032d.js.map": "/portofolio_page/static/js/main.d3ed032d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.15a5329a.css",
+    "static/js/main.d3ed032d.js"
+  ]
+}
