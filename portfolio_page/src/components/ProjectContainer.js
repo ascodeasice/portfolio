@@ -40,7 +40,7 @@ function ProjectContainer({ scrollTrigger }) {
     {
       name: 'Battleship',
       description: 'he classic game \'Battleship\', made with TDD in JavaScript.\nYou have to find where the opponent\'s ship is, and sunken them.\n\nMade with Jest, Webpack, ESLint and Babel.',
-      liveLink: 'https://github.com/ascodeasice/battleship',
+      liveLink: 'https://ascodeasice.github.io/battleship/',
       githubLink: 'https://github.com/ascodeasice/battleship',
       src: BattleShip
     },
